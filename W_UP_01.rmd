@@ -32,7 +32,7 @@ $H_A$: The average number of pushups done by line players is statistically diffe
 <!--Decide on your methods: use "variable analysis" or other appropriate descriptors. Make sure to choose at least one graphical method and at least one numerical method.!-->
 
 The number of pushups for football players depend on their position. There are line and skill players; we want to use the numerical~cat
-helper file
+helper file.
 
 # Results
 
@@ -72,15 +72,23 @@ It is apparent in this plot that skill players are able to do a significantly la
 ```{r}
 favstats(pushups~position,data=mydata)
 ```
-This graph shows that the mean-value of pushups for line players is 17.2 and the skill players mean-value was 50. In two minutes, Skill players on average were able to do almost three times more push ups than the line players.
+This graph shows that the mean-value of pushups for line players is 17.2 and the skill players mean-value was about 50. In two minutes, skill players on average were able to do almost three times more push ups than the line players.
 
 
 ## Inferential Results
 
 <!--State hypothesis clearly. Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc. Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
+ 
+```{r}
+t.test(pushups~position,data=mydata)
+```
+The p-value is 0.000009421.The p-value is a such a small number that this result is unlikely to occur by chance.
+
 
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here. If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason. Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
+The original question was what players on the football team did more pushups:line players or skill players. Using evidence gathered from the boxplots and the numerical results it is clear that the skill players average number of pushups in 2 minutes was almost three times greater than the line players. 50:17 skill players to line players.
 
